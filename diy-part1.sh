@@ -12,6 +12,7 @@
 
 # Uncomment a feed source
 sed -i 's/src-git luci https:\/\/github.com\/coolsnowwolf\/luci.git;openwrt-23.05/src-git luci https:\/\/github.com\/coolsnowwolf\/luci.git;openwrt-24.10/g' ./feeds.conf.default
+sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 #echo >> feeds.conf.default
 #echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
 #echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
@@ -19,6 +20,6 @@ sed -i 's/src-git luci https:\/\/github.com\/coolsnowwolf\/luci.git;openwrt-23.0
 #./scripts/feeds install -a -p nas
 #./scripts/feeds install -a -p nas_luci
 
-echo >> feeds.conf.default
-echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+#echo >> feeds.conf.default
+#echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
 
