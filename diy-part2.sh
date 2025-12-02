@@ -47,3 +47,5 @@ git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-t
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+./scripts/feeds update istore
+./scripts/feeds install -d y -p istore luci-app-store
