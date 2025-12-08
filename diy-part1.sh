@@ -12,6 +12,9 @@
 
 # Uncomment a feed source
 sed -i 's/src-git luci https:\/\/github.com\/coolsnowwolf\/luci.git;openwrt-23.05/src-git luci https:\/\/github.com\/coolsnowwolf\/luci.git;openwrt-24.10/g' ./feeds.conf.default
+./scripts/feeds update -a
+./scripts/feeds install -a
+
 echo >> feeds.conf.default
 echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
 echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
