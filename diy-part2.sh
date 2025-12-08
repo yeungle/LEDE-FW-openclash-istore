@@ -23,6 +23,7 @@ rm -rf feeds/luci/themes/luci-theme-argon
 #rm -rf feeds/luci/applications/luci-app-adguardhome
 #rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-openclash
+mv feeds/packages/lang/ruby feeds/packages/lang/ruby.disabled
 
 git clone --depth=1 https://github.com/kenzok8/small-package.git kenzok8-packages
 cp -rf kenzok8-packages/ddnsto package/ddnsto
