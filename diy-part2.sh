@@ -19,31 +19,33 @@
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
-rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-adguardhome
-rm -rf feeds/packages/net/adguardhome
-rm -rf feeds/luci/applications/luci-app-openclash
+rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
 
-git clone --depth=1 https://github.com/kenzok8/small-package.git kenzok8-packages
+#rm -rf feeds/luci/themes/luci-theme-argon
+#rm -rf feeds/luci/applications/luci-app-adguardhome
+#rm -rf feeds/packages/net/adguardhome
+#rm -rf feeds/luci/applications/luci-app-openclash
+
+#git clone --depth=1 https://github.com/kenzok8/small-package.git kenzok8-packages
 #cp -rf kenzok8-packages/ddnsto package/ddnsto
 #cp -rf kenzok8-packages/luci-app-ddnsto package/luci-app-ddnsto
-cp -rf kenzok8-packages/wrtbwmon package/wrtbwmon
-cp -rf kenzok8-packages/luci-app-wrtbwmon package/luci-app-wrtbwmon
-cp -rf kenzok8-packages/adguardhome package/adguardhome
-cp -rf kenzok8-packages/luci-app-adguardhome package/luci-app-adguardhome
+#cp -rf kenzok8-packages/wrtbwmon package/wrtbwmon
+#cp -rf kenzok8-packages/luci-app-wrtbwmon package/luci-app-wrtbwmon
+#cp -rf kenzok8-packages/adguardhome package/adguardhome
+#cp -rf kenzok8-packages/luci-app-adguardhome package/luci-app-adguardhome
 #cp -rf kenzok8-packages/quickstart package/quickstart
 #cp -rf kenzok8-packages/luci-app-quickstart package/luci-app-quickstart
 #cp -rf kenzok8-packages/luci-app-store package/luci-app-store
 #cp -rf kenzok8-packages/luci-lib-taskd package/luci-lib-taskd
 #cp -rf kenzok8-packages/taskd package/taskd
 #cp -rf kenzok8-packages/luci-lib-xterm package/luci-lib-xterm
-rm -rf kenzok8-packages
+#rm -rf kenzok8-packages
 
-git clone --depth=1 https://github.com/vernesong/OpenClash.git OpenClash-packages
-cp -rf OpenClash-packages/luci-app-openclash package/luci-app-openclash
-rm -rf OpenClash-packages
+#git clone --depth=1 https://github.com/vernesong/OpenClash.git OpenClash-packages
+#cp -rf OpenClash-packages/luci-app-openclash package/luci-app-openclash
+#rm -rf OpenClash-packages
 
-git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+#git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
