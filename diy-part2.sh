@@ -51,8 +51,8 @@ rm -rf OpenClash-packages
 
 git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
-git clone https://github.com/linkease/nas-packages.git;master package/nas-packages
-git clone https://github.com/linkease/nas-packages-luci.git;main package/nas-packages-luci
+git clone https://github.com/linkease/nas-packages.git package/nas-packages
+git clone https://github.com/linkease/nas-packages-luci.git package/nas-packages-luci
 
 #./scripts/feeds update -a
 #./scripts/feeds install -a
